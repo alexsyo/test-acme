@@ -247,35 +247,78 @@ label[for=address] {
     display: block !important;
 }
 .video-container {
-    position: absolute;
+    position: relative;
     bottom: 0%;
     left: 0%;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: #000;
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);;
 }
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+/*.video-container video.fillWidth {
+    width: 100%;
+}*/
 
-/* -- header -- */
-header {
+/* -- title -- */
+#title {
     color: white;
     position: relative;
     height: 100%;
 }
 
-header > div {
+#title > div {
     position: absolute;
     bottom: 10px;
     width: 100%;
 }
 
-header h1 {
-    font-size: 100px;
-    font-weight: 100;
-}
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
 
-header p {
-    font-size: 40px;
-    font-weight: 100;
+    #title > div {
+        bottom: 50px;
+    }
+
+    #title h1 {
+        font-size: 100px;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    #title p {
+        font-size: 40px;
+        font-weight: 100;
+        text-align: center;
+    }
+
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    #title h1 {
+        font-size: 140px;
+        font-weight: 100;
+    }
+
+    #title p {
+        font-size: 60px;
+        font-weight: 100;
+    }
+
 }

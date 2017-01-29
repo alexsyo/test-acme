@@ -3,6 +3,7 @@
 angular.module('app', [
     'ngRoute',
     'ngResource',
+    'ngMessages',
     'directives',
     'services',
     'home',

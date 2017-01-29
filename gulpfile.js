@@ -23,6 +23,7 @@ gulp.task('vendorJS', () => {
         './bower_components/angular/angular.min.js',
         './bower_components/angular-resource/angular-resource.min.js',
         './bower_components/angular-route/angular-route.min.js',
+        './bower_components/angular-messages/angular-messages.min.js',
         './bower_components/jquery/dist/jquery.min.js',
         './bower_components/bootstrap/dist/js/bootstrap.min.js'
     ])

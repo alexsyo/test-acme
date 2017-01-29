@@ -146,9 +146,21 @@
 
       </div>
 
+      <!-- Error pane -->
+      <div id="formError" class="row" ng-show="userForm.$submitted && userForm.$invalid">
+        <div class="col-xs-12 text-center">
+          <div ng-messages="userForm.$error">
+            <p ng-message="required">Please fill in all the fields.</p>
+            <p ng-message="email">The email provided is not in the correct format.</p>
+            <p ng-message="zipcode">Enter a Netherlands zip code - e.g.: 6716ME.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sumbit button -->
       <div class="form-group">
         <div class="col-xs-12">
-          <input class="btn btn-default center-block" type="submit" value="Subscribe" ng-disabled="userForm.$invalid">
+          <input class="btn btn-default center-block" type="submit" value="Subscribe">
         </div>
       </div>
 

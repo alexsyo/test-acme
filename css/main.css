@@ -5,7 +5,6 @@
 }
 
 a, p {
-    /*font-family: "Roboto", sans-serif;;*/
     font-size: 16px;
     color: #333
 }
@@ -212,6 +211,14 @@ label[for=address] {
 
 #thanks p {
     font-size: 40px;
+}
+
+#formError {
+    padding: 30px 0 15px;
+}
+
+#formError p {
+    color: #E83F7A;
 }
 
 /* -- footer -- */

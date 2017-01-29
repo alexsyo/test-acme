@@ -1,0 +1,35 @@
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">{{user.name}}</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="user-key col-xs-12 col-sm-2"><p>Gender</p></div>
+          <div class="user-property col-xs-10"><p>{{user.gender}}</p></div>
+        </div>
+        <div class="row">
+          <div class="user-key col-xs-12 col-sm-2"><p>Email</p></div>
+          <div class="user-property col-xs-10"><p>{{user.email}}</p></div>
+        </div>
+        <div class="row">
+          <div class="user-key col-xs-12 col-sm-2"><p>Phone</p></div>
+          <div class="user-property col-xs-10"><p>{{user.phone}}</p></div>
+        </div>
+        <div class="row" ng-repeat="(i, address) in user.address">
+          <div class="user-key col-xs-12 col-sm-2"><p>Address <span ng-show="selectedUser.address.length > 1">{{i + 1}}</span></p></div>
+          <div class="user-property col-xs-10 row">
+            <div class="col-xs-12">{{address.number}} {{address.street}}</div>
+            <div class="col-xs-12">{{address.city}}</div>
+            <div class="col-xs-12">{{address.zipcode}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

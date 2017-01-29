@@ -1,0 +1,13 @@
+<search terms="terms"></search>
+<div class="list container-fluid">
+  <div class="row">
+    <div ng-repeat="user in users | filter: terms | orderBy: 'name'" 
+        ng-click="selectUser(user)"
+        class="name col-xs-12 col-sm-4 col-md-3">
+      <div class="btn btn-default center-block" data-toggle="modal" data-target="#userModal">
+        {{user.name}}
+      </div>
+    </div>
+  </div>
+</div>
+<user-modal user="selectedUser"></user-modal>

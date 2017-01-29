@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Acme</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vendor/css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- vendor -->
+    <script type="text/javascript" src="vendor/js/vendor.js"></script>
+
+    <!-- modules -->
+    <script type="text/javascript" src="js/src/app.js"></script>
+    <script type="text/javascript" src="js/src/libs/directives/directives.js"></script>
+    <script type="text/javascript" src="js/src/libs/services/services.js"></script>
+    <script type="text/javascript" src="js/src/home/home.js"></script>
+    <script type="text/javascript" src="js/src/form/form.js"></script>
+    <script type="text/javascript" src="js/src/list/list.js"></script>
+    
+  </head>
+  <body ng-app="app">
+    <navigation></navigation>
+    <div ng-view></div>
+    <footer></footer>
+  </body>
+</html>

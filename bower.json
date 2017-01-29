@@ -1,0 +1,28 @@
+{
+  "name": "test-acme",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Alessandro <alex_ok@hotmail.it>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/alexsyo/test-acme",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.6.1"
+  },
+  "dependencies": {
+    "angular-route": "~1.6.1",
+    "angular": "~1.6.1",
+    "angular-resource": "~1.6.1",
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.7.0"
+  }
+}

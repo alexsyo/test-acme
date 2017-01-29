@@ -8,12 +8,12 @@
         <div class="col-xs-12 col-sm-9">
           <input id="name" name="name" type="text" placeholder="Name" ng-class="{
             'form-control': true,
-            'error': userForm.name.$invalid && userForm.name.$dirty
+            'error': userForm.name.$invalid && (userForm.name.$dirty || userForm.$submitted)
           }" ng-model="user.name.first" required>
           <i ng-class="{
               'fa': true,
               'fa-check': userForm.name.$valid,
-              'fa-times': userForm.name.$invalid && userForm.name.$dirty
+              'fa-times': userForm.name.$invalid && (userForm.name.$dirty || userForm.$submitted)
           }" aria-hidden="true"></i>
         </div>
       </div>
@@ -24,12 +24,12 @@
         <div class="col-xs-12 col-sm-9">
           <input id="surname" name="surname" type="text" placeholder="Surname" ng-class="{
             'form-control': true,
-            'error': userForm.surname.$invalid && userForm.surname.$dirty
+            'error': userForm.surname.$invalid && (userForm.surname.$dirty || userForm.$submitted)
           }" ng-model="user.name.second" required>
           <i ng-class="{
               'fa': true,
               'fa-check': userForm.surname.$valid,
-              'fa-times': userForm.surname.$invalid && userForm.surname.$dirty
+              'fa-times': userForm.surname.$invalid && (userForm.surname.$dirty || userForm.$submitted)
           }" aria-hidden="true"></i>
         </div>
       </div>
@@ -53,12 +53,12 @@
         <div class="col-xs-12 col-sm-9">
           <input id="email" name="email" type="email" placeholder="Email" ng-class="{
             'form-control': true,
-            'error': userForm.email.$invalid && userForm.email.$dirty
+            'error': userForm.email.$invalid && (userForm.email.$dirty || userForm.$submitted)
           }" ng-model="user.email" required>
           <i ng-class="{
               'fa': true,
               'fa-check': userForm.email.$valid,
-              'fa-times': userForm.email.$invalid && userForm.email.$dirty
+              'fa-times': userForm.email.$invalid && (userForm.email.$dirty || userForm.$submitted)
           }" aria-hidden="true"></i>
         </div>
       </div>
@@ -69,12 +69,12 @@
         <div id="phoneNumber" class="col-xs-12 col-sm-9">
           <input id="phoneNumber" name="phoneNumber" type="number" placeholder="Phone" ng-class="{
             'form-control': true,
-            'error': userForm.phoneNumber.$invalid && userForm.phoneNumber.$dirty
+            'error': userForm.phoneNumber.$invalid && (userForm.phoneNumber.$dirty || userForm.$submitted)
           }" ng-model="user.phone" required>
           <i ng-class="{
             'fa': true,
             'fa-check': userForm.phoneNumber.$valid,
-            'fa-times': userForm.phoneNumber.$invalid && userForm.phoneNumber.$dirty
+            'fa-times': userForm.phoneNumber.$invalid && (userForm.phoneNumber.$dirty || userForm.$submitted)
           }" aria-hidden="true"></i>
         </div>
       </div>
@@ -90,12 +90,12 @@
         <div class="col-xs-12 col-sm-3">
           <input id="addressNumber" name="addressNumber" type="number" placeholder="Number" ng-class="{
                 'form-control': true,
-                'error': userForm.addressNumber.$invalid && userForm.addressNumber.$dirty
+                'error': userForm.addressNumber.$invalid && (userForm.addressNumber.$dirty || userForm.$submitted)
               }" ng-model="user.address[0].number" required>
           <i ng-class="{
                 'fa': true,
                 'fa-check': userForm.addressNumber.$valid,
-                'fa-times': userForm.addressNumber.$invalid && userForm.addressNumber.$dirty
+                'fa-times': userForm.addressNumber.$invalid && (userForm.addressNumber.$dirty || userForm.$submitted)
               }" aria-hidden="true"></i>
         </div>
 
@@ -104,12 +104,12 @@
         <div class="col-xs-12 col-sm-5">
           <input id="street" name="street" type="text" placeholder="Street" ng-class="{
                 'form-control': true,
-                'error': userForm.street.$invalid && userForm.street.$dirty
+                'error': userForm.street.$invalid && (userForm.street.$dirty || userForm.$submitted)
               }" ng-model="user.address[0].street" required>
           <i ng-class="{
                 'fa': true,
                 'fa-check': userForm.street.$valid,
-                'fa-times': userForm.street.$invalid && userForm.street.$dirty
+                'fa-times': userForm.street.$invalid && (userForm.street.$dirty || userForm.$submitted)
               }" aria-hidden="true"></i>
         </div>
 
@@ -121,12 +121,12 @@
         <div class="col-xs-12 col-sm-3">
           <input id="city" name="city" type="text" placeholder="City" ng-class="{
                 'form-control': true,
-                'error': userForm.city.$invalid && userForm.city.$dirty
+                'error': userForm.city.$invalid && (userForm.city.$dirty || userForm.$submitted )
               }" ng-model="user.address[0].city" required>
           <i ng-class="{
                 'fa': true,
                 'fa-check': userForm.city.$valid,
-                'fa-times': userForm.city.$invalid && userForm.city.$dirty
+                'fa-times': userForm.city.$invalid && (userForm.city.$dirty || userForm.$submitted )
               }" aria-hidden="true"></i>
         </div>
 
@@ -135,12 +135,12 @@
         <div class="col-xs-12 col-sm-5">
           <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" maxlength="6" ng-class="{
                 'form-control': true,
-                'error': userForm.zipcode.$invalid && userForm.zipcode.$dirty
+                'error': userForm.zipcode.$invalid && (userForm.zipcode.$dirty || userForm.$submitted)
               }" ng-model="user.address[0].zipcode" zipcode required>
           <i ng-class="{
                 'fa': true,
                 'fa-check': userForm.zipcode.$valid,
-                'fa-times': userForm.zipcode.$invalid && userForm.zipcode.$dirty
+                'fa-times': userForm.zipcode.$invalid && (userForm.zipcode.$dirty || userForm.$submitted)
               }" aria-hidden="true"></i>
         </div>
 
